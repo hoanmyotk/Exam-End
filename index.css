@@ -13,6 +13,12 @@ a{
     display: block;
     text-decoration: none;
 }
+img{
+    object-fit: cover;
+}
+.space-between{
+    justify-content: space-between;
+}
 header{
     width: 100vw;
     height: 100vh;
@@ -61,7 +67,7 @@ header::before{
     position: absolute;
     width: 100%;
     height: 100%;
-    background-color: white;
+    background-color: #F1EEE9;
     transform: translateY(-100%);
     transition: 0.3s;
 }
@@ -102,13 +108,13 @@ header::before{
 .menu-line{
     height: 4px;
     width: 100%;
-    background-color: #FBBC01;
+    background-color: #15133C;
     position: relative;
 }
 .menu-line::before{
     height: 4px;
     width: 100%;
-    background-color: #FBBC01;
+    background-color: #15133C;
     content: "";
     display: block;
     position: absolute;
@@ -117,7 +123,7 @@ header::before{
 .menu-line::after{
     height: 4px;
     width: 100%;
-    background-color: #FBBC01;
+    background-color: #15133C;
     content: "";
     display: block;
     position: absolute;
@@ -153,23 +159,27 @@ header::before{
     position: fixed;
     top: 0;
     right: -100%;
-    width: 20vw;
+    min-width: 250px;
     height: 100vh;
     background-color: rgba(0, 0, 0, 0.7);
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     text-align: center;
     z-index: 3;
 }
 .search{
-    position: absolute;
-    top: 15%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 90px;
     width: 100%;
-    height: 10%;
+    height: 100px;
     float: left;
 }
 .search i{
+    width: 45px;
     padding: 5px;
     background-color: #FBBC01;
     position: absolute;
@@ -177,12 +187,13 @@ header::before{
     color: black;
     font-size: 25pt;
     border-radius: 10px;
+    cursor: pointer;
 }
 .search input{
     display: block;
     position: absolute;
     left: 10px;
-    width: 70%;
+    width: 170px;
     outline: none;
     border: none;
     padding: 10px;
@@ -195,7 +206,7 @@ header::before{
 .list-menu{
     width: 100%;
     height: 70%;
-    margin-top: 45%;
+    margin-top: 0px;
 }
 /* .menu-item ul{
     margin-top: 10px;
@@ -227,7 +238,7 @@ li:hover > a{
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     z-index: 6;
     top: 0;
-    right: 20vw;
+    right: 250px;
 }
 .subnav a{
     color: black !important;
@@ -242,7 +253,7 @@ li:hover > a{
     transition: 0.5s;
 }
 #ticker:checked ~ .menu-icon{
-    right: 16%;
+    right: 200px;
     z-index: 9;
     transition: 0.5s;
 }
@@ -250,7 +261,7 @@ li:hover > a{
     transition: 0.5s;
 }
 #ticker:checked{
-    right: 16%;
+    right: 200px;
     z-index: 10;
     transition: 0.5s;
 }
@@ -306,41 +317,105 @@ button{
     color: white;
 }
 .padding{
-    padding: 0 80px;
+    padding: 15px;
 }
 .row{
     display: flex;
     flex-wrap: wrap;
 }
+.section{
+    width: 100%;
+    text-align: center;
+    margin-top: 50px;
+}
 .title{
     text-align: center;
     width: 100%;
     padding: 6px 0;
+    margin-bottom: 30px;
 }
 .title h2{
+    font-size: 40px;
+}
+.manga-title{
+    text-align: center;
+    width: 100%;
+    padding: 6px 0;
+    margin-bottom: 30px;
+}
+.section h2{
     font-size: 45px;
     display: block;
 }
 .about-this .about-content img{
     width: 100%;
+    height: 100%;
     border-radius: 10px;
 }
 .about-this .about-content{
-    width: 50%;
+    max-width: 50%;
+    overflow: hidden;
+}
+.about-this .about-content p{
+    text-align: justify;
 }
 /* .center{
     justify-content: center;
 } */
+.about-that{
+    background-color: #F1EEE9;
+    color: #15133C;
+}
 .that-btn{
+    position: relative;
     margin: 15px;
     background-color: transparent;
     font-size: 25px;
+    transition: all 0.5s ease;
+}
+.that-btn::before{
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    border-radius: 20px;
+    border-bottom: 2px solid black;
+    transition: all 0.5s ease;
+}
+.that-btn.active{
+    color: #FBBC01;
+}
+.that-btn.active::before{
+    width: 100%;
 }
 .items{
     width: 50%;
+    padding: 20px 15px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: relative;
+    flex-wrap: wrap;
+    transition: all ease 0.3s;
+}
+.items::before{
+    content: "";
+    display: block;
+    position: absolute;
+    left: 15px;
+    right: 15px;
+    bottom: 0;
+    border-bottom: 1px solid black;
+    width: 80%;
+    height: 0;
+}
+.items:hover .img-item p{
+    color: #808080;
+}
+.items:hover .manga-prince p{
+    color: #FBBC01;
 }
 .img-item{
     display: flex;
@@ -348,7 +423,39 @@ button{
 }
 .img-item p{
     margin-left: 25px;
+    font-size: 20px;
+    color: #FBBC01;
 }
 .img-item img{
-    width: 150px;
+    width: 120px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.manga-prince p{
+    font-size: 20px;
+    color: #808080;
+    transition: all 0.3s ease-in;
+}
+.items-content{
+    display: none;
+}
+.items-content.active{
+    display: flex;
+    flex-wrap: wrap;
+    transition: all 0.3s ease-in;
+}
+.footer-item{
+    width: 50%;
+}
+footer{
+    margin-top: 105px;
+    border-top: 5px solid #FBBC01;
+}
+.end{
+    width: 100%;
+    background-color: #808080;
+    text-align: center;
+}
+.end p{
+    color: black;
 }
