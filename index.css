@@ -4,6 +4,11 @@
     box-sizing: border-box;
     font-family: 'Nunito', sans-serif;
 }
+body{
+    width: 100vw;
+    height: 100vh;
+    display: block;
+}
 li{
     padding: 0 20px;
     width: 100%;
@@ -28,7 +33,6 @@ header{
     align-items: center;
     text-align: center;
     overflow: hidden;
-   
 }
 header>img{
     width: 100%;
@@ -57,7 +61,7 @@ header::before{
     position: fixed;
     width: 100vw;
     height: 77px;
-    top:0;
+    top: 0;
     background-color: transparent;
     z-index: 2;
 }
@@ -77,13 +81,11 @@ header::before{
 .logo{
     overflow: hidden;
     position: fixed;
-    top:-5px;
+    top: -4px;
     left: 2px;
     width: 100px;
     height: 100px;
     display: flex;
-    /* border-radius: 50%;
-    border: 2px dotted black; */
     z-index: 8;
 }
 .logo img{
@@ -161,7 +163,7 @@ header::before{
     right: -100%;
     min-width: 250px;
     height: 100vh;
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: #FFD369;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -179,27 +181,28 @@ header::before{
     float: left;
 }
 .search i{
+    background-color: transparent;
     width: 45px;
     padding: 5px;
-    background-color: #FBBC01;
+    color: #15133C;
     position: absolute;
     right: 10px;
-    color: black;
     font-size: 25pt;
     border-radius: 10px;
     cursor: pointer;
+    padding-left: 15px;
 }
 .search input{
     display: block;
     position: absolute;
     left: 10px;
-    width: 170px;
+    width: 190px;
     outline: none;
     border: none;
     padding: 10px;
-    color: #FBBC01;
+    color: #15133C;
     border-radius: 10px;
-    border: 2px solid #FBBC01;
+    border: 2px solid #15133C;
     background-color: transparent;
 }
 
@@ -215,7 +218,7 @@ header::before{
     line-height: 65px;
 }
 .menu-item li a{
-    color: #FBBC01;
+    color: #15133C;
     font-size: 20pt;
 }
 .menu-item li:hover .subnav{
@@ -274,26 +277,110 @@ li:hover > a{
     padding: 20px 20px;
     border-radius: 10px; */
 }
-.header-slogan h1{
+/* .header-slogan h1{
     color: #FBBC01;
     font-size: 50pt;
     margin-bottom: 20px;
     text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+} */
+.login{
+    border-radius: 10px;
+    width: 400px;
+    position: relative;
+    background-color: #F1EEE9;
+    text-align: left;
+    flex-grow: 1;
+    /* display: none; */
+    padding: 10px 30px 30px 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    margin-bottom: 20px;
+    opacity: 1;
+    z-index: 3;
+    transform: translateY(-100vh);
+    transition: all 0.4s ease-in-out;
 }
-#Dangki{
+.login.active{
+    transform: translateY(0);
+    opacity: 0.8;
+}
+.dangki{
+    display: none;
     outline: none;
     border: none;
     cursor: pointer;
-    padding: 15px 40px;
+    padding: 15px 30px;
     border-radius: 50px;
     font-size: 15pt;
     background-color: #FBBC01;
     opacity: 0.3;
     animation: nhapnhay 2s infinite;
 }
+.dangki:hover{
+    background: transparent;
+    color: #FBBC01;
+    border: 2px solid #FBBC01;
+}
+.dangki.active{
+    margin: 0 auto;
+    transform: translateY(-170px);
+    display: block;
+}
 button{
     outline: none;
     border: none;
+    cursor: pointer;
+}
+.form-heading{
+    font-size: 35px;
+    text-align: center;
+    margin-bottom: 25px;
+    margin-top: 15px;
+}
+.form-input{
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 18px;
+}
+.form-input::placeholder{
+    color: #15133C;
+}
+.form-group{
+    border-bottom: 2px solid black;
+    margin-bottom: 25px;
+    margin-top: 15px;
+}
+.form-group i{
+    padding-right: 5px;
+}
+.form-submit{
+    border: 2px solid black;
+    width: 100%;
+    text-transform: uppercase;
+    padding: 8px 10px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: all 0.3s ease;
+}
+.form-submit:hover{
+    background-color: #FFD369;
+}
+.eye{
+    float: right;
+}
+.eye i{
+    color: black;
+    padding: 0;
+    cursor: pointer;
+}
+.close{
+    position: absolute;
+    top: 2px;
+    right: 7px;
+}
+.close i{
+    font-size: 40px;
+    color: #FF5D5D;
     cursor: pointer;
 }
 @keyframes nhapnhay{
@@ -307,13 +394,9 @@ button{
         opacity: 0.3;
     }
 }
-#Dangki:hover{
-    background: transparent;
-    color: #FBBC01;
-    border: 2px solid #FBBC01;
-}
 .about-this{
-    background-color: black;
+    width: 100vw;
+    background-color: #1F1D36;
     color: white;
 }
 .padding{
@@ -363,6 +446,7 @@ button{
     justify-content: center;
 } */
 .about-that{
+    width: 100vw;
     background-color: #F1EEE9;
     color: #15133C;
 }
@@ -378,23 +462,22 @@ button{
     display: block;
     position: absolute;
     left: 0;
-    bottom: 0;
+    bottom: -4px;
     width: 0;
-    border-radius: 20px;
-    border-bottom: 2px solid black;
+    border-radius: 10px;
+    border-bottom: 2px solid #FF5D5D;
     transition: all 0.5s ease;
 }
 .that-btn.active{
     color: #FBBC01;
 }
 .that-btn.active::before{
-    width: 100%;
+    width: 99%;
 }
 .items{
-    width: 50%;
+    min-width: 33.3333%;
     padding: 20px 15px;
     display: flex;
-    justify-content: space-between;
     align-items: center;
     position: relative;
     flex-wrap: wrap;
@@ -412,7 +495,7 @@ button{
     height: 0;
 }
 .items:hover .img-item p{
-    color: #808080;
+    color: #15133C;
 }
 .items:hover .manga-prince p{
     color: #FBBC01;
@@ -423,17 +506,35 @@ button{
 }
 .img-item p{
     margin-left: 25px;
-    font-size: 20px;
+    font-size: 18px;
     color: #FBBC01;
 }
 .img-item img{
-    width: 120px;
+    width: 130px;
+    height: 190px;
     border-radius: 10px;
     cursor: pointer;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    transition: all 0.3s ease;
+}
+.img-item img:hover{
+    transform: scale(1.1);
+}
+.manga-prince{
+    margin-left: 25px;
+    position: relative;
+}
+.manga-prince::before{
+    content: "|";
+    position: absolute;
+    left: -12px;
+    top: -5px;
+    font-size: 25px;
+    color: #808080;
 }
 .manga-prince p{
-    font-size: 20px;
-    color: #808080;
+    font-size: 18px;
+    color: #15133C;
     transition: all 0.3s ease-in;
 }
 .items-content{
@@ -441,6 +542,8 @@ button{
 }
 .items-content.active{
     display: flex;
+    justify-content: space-between;
+    align-items: center;
     flex-wrap: wrap;
     transition: all 0.3s ease-in;
 }

@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -21,7 +21,7 @@
 <body>
     <header>
         <div class="top"></div>
-        <img src="background2.png" alt="">
+        <img src="image/background2.png" alt="">
         <input type="checkbox" id="ticker">
         <div class="menu-icon">
             <div class="menu-line"></div>
@@ -29,7 +29,6 @@
         <div class="menu-item">
             <div class="search">
                 <input type="search" placeholder="Nhập nội dung">
-                <i class="fa-solid fa-magnifying-glass"></i>
             </div>
             <div class="list-menu">
                 <ul>
@@ -52,10 +51,30 @@
             </div>
         </div>
         <div class="logo">
-            <a href=""><img src="Logo.png" alt=""></a>
+            <a href=""><img src="image/Logo.png" alt=""></a>
         </div>
         <div class="header-slogan" data-aos="fade-down" data-aos-duration="1500">
-            <input type="submit" value="Đăng kí" id="Dangki">
+            <div class="wraper">
+                <form action="" class="login">
+                    <div class="close">
+                        <i class="fa-solid fa-xmark" id="dong"></i>
+                    </div>                  
+                    <h1 class="form-heading">Đăng nhập</h1>
+                    <div class="form-group">
+                        <i class="fa-solid fa-user"></i>
+                        <input type="text" placeholder="Tên Đăng Nhập" class="form-input">
+                    </div>
+                    <div class="form-group">
+                        <i class="fa-solid fa-key"></i>
+                        <input type="password" placeholder="Mật khẩu" class="form-input" id="pass">
+                        <div class="eye">
+                            <i class="fa-solid fa-eye-slash" id="mat"></i>
+                        </div>
+                    </div>
+                    <input type="submit" value="Đăng nhập" class="form-input form-submit">
+                </form>
+            </div>
+            <button class="dangki active">Đăng nhập</button>
         </div>
     </header>
     <div class="about-this padding">
@@ -72,7 +91,7 @@
                     <p>One Piece là câu truyện kể về Luffy và các thuyền viên của mình. Khi còn nhỏ, Luffy ước mơ trở thành Vua Hải Tặc. Cuộc sống của cậu bé thay đổi khi cậu vô tình có được sức mạnh có thể co dãn như cao su, nhưng đổi lại, cậu không bao giờ có thể bơi được nữa. Giờ đây, Luffy cùng những người bạn hải tặc của mình ra khơi tìm kiếm kho báu One Piece, kho báu vĩ đại nhất trên thế giới. Trong One Piece, mỗi nhân vật trong đều mang một nét cá tính đặc sắc kết hợp cùng các tình huống kịch tính, lối dẫn truyện hấp dẫn chứa đầy các bước ngoặt bất ngờ và cũng vô cùng hài hước đã biến One Piece trở thành một trong những bộ truyện nổi tiếng nhất không thể bỏ qua. Hãy đọc One Piece để hòa mình vào một thế giới của những hải tặc rộng lớn, đầy màu sắc, sống động và thú vị, cùng đắm chìm với những nhân vật yêu tự do, trên hành trình đi tìm ước mơ của mình.</p>
                 </div>
                 <div class="about-content padding" data-aos="fade-up-left" data-aos-duration="1300">
-                    <img src="background.png" alt="">
+                    <img src="image/background.png" alt="">
                 </div>
             </div>
         </div>
@@ -92,12 +111,21 @@
                     <button class="that-btn" data-title="#hocduong">Học đường</button>
                 </div>
             </div>
-            <div class="row center">
+            <div class="row padding">
                 <div class="items-content active" id="hanhdong">
                     <div class="items" data-aos="fade-right" data-aos-duration="1300">
                         <div class="img-item">
-                            <img src="item1.jpg" alt="">
-                            <p>Naruto1</p>
+                            <img src="image/item1.jpg" alt="">
+                            <p>Naruto 1</p>
+                        </div>
+                        <div class="manga-prince">
+                            <p>150.000</p>
+                        </div>
+                    </div>
+                    <div class="items" data-aos="fade-up" data-aos-duration="1300">
+                        <div class="img-item">
+                            <img src="image/na2.jpg" alt="">
+                            <p>Naruto 2</p>
                         </div>
                         <div class="manga-prince">
                             <p>150.000</p>
@@ -105,8 +133,8 @@
                     </div>
                     <div class="items" data-aos="fade-left" data-aos-duration="1300">
                         <div class="img-item">
-                            <img src="item1.jpg" alt="">
-                            <p>Naruto1</p>
+                            <img src="image/onepiece.jpg" alt="">
+                            <p>One Piece</p>
                         </div>
                         <div class="manga-prince">
                             <p>150.000</p>
@@ -114,8 +142,17 @@
                     </div>
                     <div class="items" data-aos="fade-right" data-aos-duration="1300">
                         <div class="img-item">
-                            <img src="item1.jpg" alt="">
-                            <p>Naruto1</p>
+                            <img src="image/titan5.jpg" alt="">
+                            <p>Attack On Titan </p>
+                        </div>
+                        <div class="manga-prince">
+                            <p>150.000</p>
+                        </div>
+                    </div>
+                    <div class="items" data-aos="fade-up" data-aos-duration="1300">
+                        <div class="img-item">
+                            <img src="image/fairytail.jpg" alt="">
+                            <p>Fairy tail</p>
                         </div>
                         <div class="manga-prince">
                             <p>150.000</p>
@@ -123,26 +160,8 @@
                     </div>
                     <div class="items" data-aos="fade-left" data-aos-duration="1300">
                         <div class="img-item">
-                            <img src="item1.jpg" alt="">
-                            <p>Naruto1</p>
-                        </div>
-                        <div class="manga-prince">
-                            <p>150.000</p>
-                        </div>
-                    </div>
-                    <div class="items" data-aos="fade-right" data-aos-duration="1300">
-                        <div class="img-item">
-                            <img src="item1.jpg" alt="">
-                            <p>Naruto1</p>
-                        </div>
-                        <div class="manga-prince">
-                            <p>150.000</p>
-                        </div>
-                    </div>
-                    <div class="items" data-aos="fade-left" data-aos-duration="1300">
-                        <div class="img-item">
-                            <img src="item1.jpg" alt="">
-                            <p>Naruto1</p>
+                            <img src="image/blackclover.jpg" alt="">
+                            <p>Black Clover</p>
                         </div>
                         <div class="manga-prince">
                             <p>150.000</p>
@@ -150,54 +169,54 @@
                     </div>
                 </div>
                 <div class="items-content" id="thethao">
-                    <div class="items">
+                    <div class="items" data-aos="fade-right" data-aos-duration="1300">
                         <div class="img-item">
-                            <img src="item1.jpg" alt="">
-                            <p>Naruto1</p>
+                            <img src="image/kuro.jpg" alt="">
+                            <p>Kuroko No Basket</p>
                         </div>
                         <div class="manga-prince">
                             <p>150.000</p>
                         </div>
                     </div>
-                    <div class="items">
+                    <div class="items" data-aos="fade-up" data-aos-duration="1300">
                         <div class="img-item">
-                            <img src="item1.jpg" alt="">
-                            <p>Naruto2</p>
+                            <img src="image/haikyui.jpg" alt="">
+                            <p>Haikyui</p>
                         </div>
                         <div class="manga-prince">
                             <p>150.000</p>
                         </div>
                     </div>
-                    <div class="items">
+                    <div class="items" data-aos="fade-left" data-aos-duration="1300">
                         <div class="img-item">
-                            <img src="item1.jpg" alt="">
-                            <p>Naruto2</p>
+                            <img src="image/aoashi.jpg" alt="">
+                            <p>Ao Ashi</p>
                         </div>
                         <div class="manga-prince">
                             <p>150.000</p>
                         </div>
                     </div>
-                    <div class="items">
+                    <div class="items" data-aos="fade-right" data-aos-duration="1300">
                         <div class="img-item">
-                            <img src="item1.jpg" alt="">
-                            <p>Naruto2</p>
+                            <img src="image/free.jpg" alt="">
+                            <p>Free!</p>
                         </div>
                         <div class="manga-prince">
                             <p>150.000</p>
                         </div>
                     </div>
-                    <div class="items">
+                    <div class="items" data-aos="fade-up" data-aos-duration="1300">
                         <div class="img-item">
-                            <img src="item1.jpg" alt="">
-                            <p>Naruto2</p>
+                            <img src="image/ice.jpg" alt="">
+                            <p>Yuri!!! on Ice</p>
                         </div>
                         <div class="manga-prince">
                             <p>150.000</p>
                         </div>
                     </div>
-                    <div class="items">
+                    <div class="items" data-aos="fade-left" data-aos-duration="1300">
                         <div class="img-item">
-                            <img src="item1.jpg" alt="">
+                            <img src="image/hachi.jpg" alt="">
                             <p>Naruto2</p>
                         </div>
                         <div class="manga-prince">
@@ -206,55 +225,55 @@
                     </div>
                 </div>
                 <div class="items-content" id="trinhtham">
-                    <div class="items">
+                    <div class="items" data-aos="fade-right" data-aos-duration="1300">
                         <div class="img-item">
-                            <img src="item1.jpg" alt="">
-                            <p>Naruto3</p>
+                            <img src="image/conan.jpg" alt="">
+                            <p>Conan</p>
                         </div>
                         <div class="manga-prince">
                             <p>150.000</p>
                         </div>
                     </div>
-                    <div class="items">
+                    <div class="items" data-aos="fade-up" data-aos-duration="1300">
                         <div class="img-item">
-                            <img src="item1.jpg" alt="">
-                            <p>Naruto3</p>
+                            <img src="image/death.jpg" alt="">
+                            <p>Death Node</p>
                         </div>
                         <div class="manga-prince">
                             <p>150.000</p>
                         </div>
                     </div>
-                    <div class="items">
+                    <div class="items" data-aos="fade-left" data-aos-duration="1300">
                         <div class="img-item">
-                            <img src="item1.jpg" alt="">
-                            <p>Naruto3</p>
+                            <img src="image/hyouka.jpg" alt="">
+                            <p>Hyouka</p>
                         </div>
                         <div class="manga-prince">
                             <p>150.000</p>
                         </div>
                     </div>
-                    <div class="items">
+                    <div class="items" data-aos="fade-right" data-aos-duration="1300">
                         <div class="img-item">
-                            <img src="item1.jpg" alt="">
-                            <p>Naruto3</p>
+                            <img src="image/psy.jpg" alt="">
+                            <p>Psycho-Pass</p>
                         </div>
                         <div class="manga-prince">
                             <p>150.000</p>
                         </div>
                     </div>
-                    <div class="items">
+                    <div class="items" data-aos="fade-up" data-aos-duration="1300">
                         <div class="img-item">
-                            <img src="item1.jpg" alt="">
-                            <p>Naruto3</p>
+                            <img src="image/bungo.jpg" alt="">
+                            <p>Bungou Stray Dogs</p>
                         </div>
                         <div class="manga-prince">
                             <p>150.000</p>
                         </div>
                     </div>
-                    <div class="items">
+                    <div class="items" data-aos="fade-left" data-aos-duration="1300">
                         <div class="img-item">
-                            <img src="item1.jpg" alt="">
-                            <p>Naruto3</p>
+                            <img src="image/Kemono.jpg" alt="">
+                            <p>Kemono Jihen</p>
                         </div>
                         <div class="manga-prince">
                             <p>150.000</p>
@@ -262,55 +281,55 @@
                     </div>
                 </div>
                 <div class="items-content" id="hocduong">
-                    <div class="items">
+                    <div class="items" data-aos="fade-right" data-aos-duration="1300">
                         <div class="img-item">
-                            <img src="item1.jpg" alt="">
-                            <p>Naruto4</p>
+                            <img src="image/doraemon.jpg" alt="">
+                            <p>Doraemon</p>
                         </div>
                         <div class="manga-prince">
                             <p>150.000</p>
                         </div>
                     </div>
-                    <div class="items">
+                    <div class="items" data-aos="fade-up" data-aos-duration="1300">
                         <div class="img-item">
-                            <img src="item1.jpg" alt="">
-                            <p>Naruto4</p>
+                            <img src="image/love.jpg" alt="">
+                            <p>Love is War</p>
                         </div>
                         <div class="manga-prince">
                             <p>150.000</p>
                         </div>
                     </div>
-                    <div class="items">
+                    <div class="items" data-aos="fade-left" data-aos-duration="1300">
                         <div class="img-item">
-                            <img src="item1.jpg" alt="">
-                            <p>Naruto4</p>
+                            <img src="image/thang4.jpg" alt="">
+                            <p>Your Lie In April</p>
                         </div>
                         <div class="manga-prince">
                             <p>150.000</p>
                         </div>
                     </div>
-                    <div class="items">
+                    <div class="items" data-aos="fade-right" data-aos-duration="1300">
                         <div class="img-item">
-                            <img src="item1.jpg" alt="">
-                            <p>Naruto4</p>
+                            <img src="image/todo.jpg" alt="">
+                            <p>Kimi ni Todoke</p>
                         </div>
                         <div class="manga-prince">
                             <p>150.000</p>
                         </div>
                     </div>
-                    <div class="items">
+                    <div class="items"  data-aos="fade-up" data-aos-duration="1300">
                         <div class="img-item">
-                            <img src="item1.jpg" alt="">
-                            <p>Naruto4</p>
+                            <img src="image/nisekoi.jpg" alt="">
+                            <p>Nisekoi</p>
                         </div>
                         <div class="manga-prince">
                             <p>150.000</p>
                         </div>
                     </div>
-                    <div class="items">
+                    <div class="items" data-aos="fade-left" data-aos-duration="1300">
                         <div class="img-item">
-                            <img src="item1.jpg" alt="">
-                            <p>Naruto4</p>
+                            <img src="image/class.jpg" alt="">
+                            <p>Assassin Classroom</p>
                         </div>
                         <div class="manga-prince">
                             <p>150.000</p>
@@ -325,7 +344,7 @@
         <div class="container">
             <div class="row">
                 <div class="footer-item padding">
-                    <img src="logo.png" width="100px" height="100px">
+                    <img src="image/logo.png" width="100px" height="100px">
                     <p>Email: hoanmyotk@gmail.com</p>
                 </div>
                 <div class="footer-item padding">
@@ -338,6 +357,7 @@
             </div>
         </div>
     </footer>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
     <script src="main.js"></script>
     <script>
         AOS.init();

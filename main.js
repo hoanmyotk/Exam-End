@@ -2,7 +2,7 @@ const Top = document.querySelector(".top");
 window.addEventListener("scroll", function(){
     const x = this.pageYOffset;
     // console.log(x) 
-    if(x>100){Top.classList.add("active")}
+    if(x>80){Top.classList.add("active")}
     else{Top.classList.remove("active")}
 })
 
@@ -18,5 +18,40 @@ menuTitle.addEventListener("click",(x) => {
             menuItem.querySelector(Target).classList.add("active");
         }
  })
-
+// $(document).ready(function(){
+//     $('.eye').click(function(){
+//         $(this).children('i').toggleClass('fa-eye-slash fa-eye');
+//     });
+// })
+const formLogin = document.querySelector(".login");
+const btnItem = document.querySelector(".dangki");
+btnItem.addEventListener("click", function(){
+    btnItem.classList.remove("active");
+    formLogin.classList.add("active");
+})
+const eyeTitle = document.querySelector(".eye");
+var Eye = document.getElementById("mat");
+ eyeTitle.addEventListener("click", function(){
+    //  alert('click');
+    eyeTitle.classList.toggle("show");
+    Eye.classList.toggle("fa-eye-slash");
+    Eye.classList.toggle("fa-eye");
+    if(eyeTitle.classList.contains("show")){
+        document.getElementById('pass').type = 'text';    
+    }
+    else{
+        document.getElementById('pass').type = 'password';
+    }
+});
+var Close = document.getElementById("dong");
+Close.addEventListener("click", function(){
+    btnItem.classList.add("active");
+    formLogin.classList.remove("active");
+}) 
+// function Show(){
+//     // alert('click')
+//     const formLogin = document.querySelectorAll(".wraper");
+//     formLogin.classList.add("active");
+//     // this.classList.remove("active");
+// }
  
