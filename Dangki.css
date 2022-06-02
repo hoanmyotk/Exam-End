@@ -33,7 +33,7 @@ body {
 form .form-control {
 	position: relative;
 	border-bottom: 2px solid #adadad;
-	margin: 40px 0;
+	margin: 30px 0;
 }
 .form-control:nth-child(1){
 	margin-top: 10px;
