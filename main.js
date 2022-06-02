@@ -48,10 +48,18 @@ Close.addEventListener("click", function(){
     btnItem.classList.add("active");
     formLogin.classList.remove("active");
 }) 
-// function Show(){
-//     // alert('click')
-//     const formLogin = document.querySelectorAll(".wraper");
-//     formLogin.classList.add("active");
-//     // this.classList.remove("active");
-// }
+
+window.onscroll = function() {scrollFunction()};
+function scrollFunction() {
+    if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+    document.getElementById("myback").classList.add("active");
+    } else {
+            document.getElementById("myback").classList.remove("active");
+    }
+}
+ 
+document.getElementById('myback').addEventListener("click", function(){
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+});
  

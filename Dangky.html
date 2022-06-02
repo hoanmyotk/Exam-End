@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="Dangki.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+      integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+</head>
+<body>
+    <div class="header">
+        <div class="container">
+          <div class="logo">
+            <a href="index.html"><img src="image/logo.png"></a>
+          </div>
+            <form>
+              <div class="form-control">
+                <input type="text" id="username" placeholder="Tên đăng nhập" title="Tên đăng nhập"/>
+                <span></span>
+                <small></small>
+              </div>
+              <div class="form-control">
+                <input type="email" id="email" placeholder="Email" title="Email" />
+                <span></span>
+                <small></small>
+              </div>
+              <div class="form-control">
+                <input type="password" id="password" placeholder="Mật khẩu" title="Mật khẩu"/>
+                <div class="eye1">
+                  <i class="fa-solid fa-eye-slash" id="mat1"></i>
+                </div>
+                <span></span>
+                <small></small>
+              </div>
+              <div class="form-control">
+                <input
+                  type="password"
+                  id="password2"
+                  placeholder="Nhập lại mật khẩu" title="Mật khẩu"
+                />
+                <div class="eye2">
+                  <i class="fa-solid fa-eye-slash" id="mat2"></i>
+                </div>
+                <span></span>
+                <small></small>
+              </div>
+              <div class="form-tick">
+                <input type="radio" id="password" placeholder="Nam" title="checkbox"/><span>Nam</span>
+                <input type="radio" id="password" placeholder="Nam" title="checkbox"/><span>Nữ</span>
+                <input type="radio" id="password" placeholder="Nam" title="checkbox"/><span>khác</span>
+                <small></small>
+              </div>
+              <div class="law">
+                <div class="ticker" style="width: 100%;">
+                  <input type="checkbox" name="" id="checkbox"><span>Tôi đồng ý với <a href="">Điều khoản dịch vụ</a></span>
+                </div>
+                <span id="error" style="color: #e74c3c; font-size: 14px; display: none;">Phải đồng ý với điều khoản dịch vụ</span>
+              </div>
+              <input type="submit" value="Đăng kí ngay" />
+            </form>
+          </div>
+    </div>
+    <div class="end">
+      <p>Exam@2022. Designed by wibu</p>
+    </div>
+    <script src="dangki.js"></script>
+</body>
+</html>

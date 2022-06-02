@@ -21,6 +21,13 @@
 <body>
     <!-- Đầu trang -->
     <header>
+         <!-- Logo -->
+         <div class="logo">
+            <a href="index.html"><img src="image/logo.png"></a>
+        </div>
+        <div id="myback">
+            <i class="fa-solid fa-angle-up"></i>
+        </div>
         <!-- Thanh trượt -->
         <div class="top"></div>
         <!-- Background  -->
@@ -35,32 +42,31 @@
             <!-- Tìm kiếm  -->
             <div class="search">
                 <input type="search" placeholder="Nhập nội dung">
+                <i class="fa-solid fa-magnifying-glass"></i>
             </div>
             <!-- list menu  -->
             <div class="list-menu">
                 <ul>
-                    <li><a href="">Trang chủ</a></li>
-                    <li><a href="">Về chúng tôi</a></li>
-                    <li><a href="">Hệ thống</a></li>
-                    <li><a href="">Hình ảnh</a></li>
-                    <li><a href="">Tin tức</a></li>
+                    <li>
+                        <a href="index.html"><i class="fa-solid fa-house" style="transform: translateY(-2.5px);"></i>Trang chủ</a>
+                    </li>
+                    <li><a href="info.html"><i class="fa-solid fa-circle-info"></i>Về chúng tôi</a></li>
+                    <li><a href=""><i class="fa-brands fa-ubuntu"></i>Hệ thống</a></li>
+                    <li><a href=""><i class="fa-solid fa-newspaper"></i>Tin tức</a></li>
                     <!-- menu con  -->
                     <li class="nav">
                       <a href="#">
-                          Liên hệ
+                        <i class="fa-solid fa-image" style="padding-right: 0;"></i>
+                          Bộ sưu tập
                       </a>
                       <ul class="subnav">
-                          <li><a href="">Facebook</a></li>
-                          <li><a href="">Gmail</a></li>
-                          <li><a href="">Discord</a></li>
+                          <li><a href="slide.html">Demon Slayder</a></li>
+                          <li><a href="slide1.html">Jujutsu Kaisen</a></li>
+                          <li><a href="slide2.html">OnePiece</a></li>
                       </ul>
                   </li>
                   </ul>
             </div>
-        </div>
-        <!-- Logo -->
-        <div class="logo">
-            <a href=""><img src="image/logo.png"></a>
         </div>
         <!-- Form Đăng nhập -->
         <div class="header-slogan" data-aos="fade-down" data-aos-duration="1500">
@@ -82,6 +88,7 @@
                         </div>
                     </div>
                     <input type="submit" value="Đăng nhập" class="form-input form-submit">
+                    <div class="signup-link"><h4>Chưa phải thành viên? <a href="Dangky.html">Đăng kí ngay</a></h4></div>
                 </form>
             </div>
             <!-- thẻ button  -->
@@ -89,7 +96,7 @@
         </div>
     </header>
     <!-- Trang giới thiệu  -->
-    <div class="about-this padding">
+    <div class="about-this">
         <div class="row">
             <div class="title" data-aos="fade-down" data-aos-duration="1000">
                 <h2>Giới thiệu</h2>
@@ -100,6 +107,9 @@
                 <h2>CHÀO MỪNG CÁC BẠN ĐẾN VỚI GITTRUYEN<span style="color: red ;">Z</span></h2>
                 <br>
                 <p>One Piece là câu truyện kể về Luffy và các thuyền viên của mình. Khi còn nhỏ, Luffy ước mơ trở thành Vua Hải Tặc. Cuộc sống của cậu bé thay đổi khi cậu vô tình có được sức mạnh có thể co dãn như cao su, nhưng đổi lại, cậu không bao giờ có thể bơi được nữa. Giờ đây, Luffy cùng những người bạn hải tặc của mình ra khơi tìm kiếm kho báu One Piece, kho báu vĩ đại nhất trên thế giới. Trong One Piece, mỗi nhân vật trong đều mang một nét cá tính đặc sắc kết hợp cùng các tình huống kịch tính, lối dẫn truyện hấp dẫn chứa đầy các bước ngoặt bất ngờ và cũng vô cùng hài hước đã biến One Piece trở thành một trong những bộ truyện nổi tiếng nhất không thể bỏ qua. Hãy đọc One Piece để hòa mình vào một thế giới của những hải tặc rộng lớn, đầy màu sắc, sống động và thú vị, cùng đắm chìm với những nhân vật yêu tự do, trên hành trình đi tìm ước mơ của mình.</p>
+                <form action="review.html" class="view-tab">
+                    <input type="submit" value="Xem thêm">
+                </form>
             </div>
             <div class="about-content padding" data-aos="fade-up-left" data-aos-duration="1300">
                 <img src="image/background.png" alt="">
@@ -112,6 +122,7 @@
                     <h2>Thể loại</h2>
                 </div>
             </div>
+            <!-- Chọn thể loại  -->
             <div class="row" data-aos="fade-down" data-aos-duration="1000">
             <div class="manga-title">
                 <button class="that-btn active" data-title="#hanhdong">Hành động</button>
@@ -120,200 +131,261 @@
                 <button class="that-btn" data-title="#hocduong">Học đường</button>
             </div>
             </div>
+            <!-- list thể loại  -->
         <div class="row padding">
+            <!-- Hành động  -->
             <div class="items-content active" id="hanhdong">
                 <div class="items" data-aos="fade-right" data-aos-duration="1300">
                     <div class="img-item">
-                        <img src="image/item1.jpg" alt="">
+                        <a href="">
+                            <div class="hot">Hot</div>
+                            <img src="image/item1.jpg" alt="">
+                        </a>
                         <p>Naruto 1</p>
                     </div>
                     <div class="manga-prince">
-                        <p>150.000</p>
+                        <button>Đọc ngay</button>
                     </div>
                 </div>
                 <div class="items" data-aos="fade-up" data-aos-duration="1300">
                     <div class="img-item">
-                        <img src="image/na2.jpg" alt="">
+                        <a href="">
+                            <div class="hot">Hot</div>
+                            <img src="image/na2.jpg" alt="">
+                        </a> 
                         <p>Naruto 2</p>
                     </div>
                     <div class="manga-prince">
-                        <p>150.000</p>
+                        <button>Đọc ngay</button>
                     </div>
                 </div>
                 <div class="items" data-aos="fade-left" data-aos-duration="1300">
                     <div class="img-item">
-                        <img src="image/onepiece.jpg" alt="">
+                        <a href="">
+                            <div class="hot">Hot</div>
+                            <img src="image/onepiece.jpg" alt="">
+                        </a>
                         <p>One Piece</p>
                     </div>
                     <div class="manga-prince">
-                        <p>150.000</p>
+                        <button>Đọc ngay</button>
                     </div>
                 </div>
                 <div class="items" data-aos="fade-right" data-aos-duration="1300">
                     <div class="img-item">
-                        <img src="image/titan5.jpg" alt="">
+                        <a href="">
+                            <div class="hot">Hot</div>
+                            <img src="image/titan5.jpg" alt="">
+                        </a>
                         <p>Attack On Titan </p>
                     </div>
                     <div class="manga-prince">
-                        <p>150.000</p>
+                        <button>Đọc ngay</button>
                     </div>
                 </div>
                 <div class="items" data-aos="fade-up" data-aos-duration="1300">
                     <div class="img-item">
+                        <a href="">
+                            <div class="hot">Hot</div>
                         <img src="image/fairytail.jpg" alt="">
+                        </a>
                         <p>Fairy tail</p>
                     </div>
                     <div class="manga-prince">
-                        <p>150.000</p>
+                        <button>Đọc ngay</button>
                     </div>
                 </div>
                 <div class="items" data-aos="fade-left" data-aos-duration="1300">
                     <div class="img-item">
+                        <a href="">
+                            <div class="hot">Hot</div>
                         <img src="image/blackclover.jpg" alt="">
+                        </a>
                         <p>Black Clover</p>
                     </div>
                     <div class="manga-prince">
-                        <p>150.000</p>
+                        <button>Đọc ngay</button>
                     </div>
                 </div>
                 <div class="items" data-aos="fade-right" data-aos-duration="1300">
                     <div class="img-item">
+                        <a href="">
+                            <div class="hot">Hot</div>
                         <img src="image/demon.jpg" alt="">
+                        </a>
                         <p>Demon Slayder</p>
                     </div>
                     <div class="manga-prince">
-                        <p>150.000</p>
+                        <button>Đọc ngay</button>
                     </div>
                 </div>
-                <!-- alskdjeqwklejqwklejqw -->
                 <div class="items" data-aos="fade-up" data-aos-duration="1300">
                     <div class="img-item">
-                        <img src="image/na2.jpg" alt="">
-                        <p>Naruto 2</p>
+                        <a href="">
+                            <div class="hot">Hot</div>
+                        <img src="image/demon2.jpg" alt="">
+                        </a>
+                        <p>Demon Slayder 2</p>
                     </div>
                     <div class="manga-prince">
-                        <p>150.000</p>
+                        <button>Đọc ngay</button>
                     </div>
                 </div>
                 <div class="items" data-aos="fade-left" data-aos-duration="1300">
                     <div class="img-item">
-                        <img src="image/onepiece.jpg" alt="">
-                        <p>One Piece</p>
+                        <a href="">
+                            <div class="hot">Hot</div>
+                        <img src="image/onepuchman.jpg" alt="">
+                        </a>
+                        <p>One Puch Man</p>
                     </div>
                     <div class="manga-prince">
-                        <p>150.000</p>
+                        <button>Đọc ngay</button>
                     </div>
                 </div>
                 <div class="items" data-aos="fade-right" data-aos-duration="1300">
                     <div class="img-item">
-                        <img src="image/titan5.jpg" alt="">
-                        <p>Attack On Titan </p>
+                        <a href="">
+                            <div class="hot">Hot</div>
+                        <img src="image/boku.jpg" alt="">
+                        </a>
+                        <p>Boku No Hero</p>
                     </div>
                     <div class="manga-prince">
-                        <p>150.000</p>
+                        <button>Đọc ngay</button>
                     </div>
                 </div>
                 <div class="items" data-aos="fade-up" data-aos-duration="1300">
                     <div class="img-item">
-                        <img src="image/fairytail.jpg" alt="">
-                        <p>Fairy tail</p>
+                        <a href="">
+                            <div class="hot">Hot</div>
+                        <img src="image/boku2.jpg" alt="">
+                        </a>
+                        <p>Boku No Hero 2</p>
                     </div>
                     <div class="manga-prince">
-                        <p>150.000</p>
+                        <button>Đọc ngay</button>
                     </div>
                 </div>
                 <div class="items" data-aos="fade-left" data-aos-duration="1300">
                     <div class="img-item">
-                        <img src="image/blackclover.jpg" alt="">
-                        <p>Black Clover</p>
+                        <a href="">
+                            <div class="hot">Hot</div>
+                        <img src="image/boku3.jpg" alt="">
+                        </a>
+                        <p>Boku No Hero 3</p>
                     </div>
                     <div class="manga-prince">
-                        <p>150.000</p>
+                        <button>Đọc ngay</button>
                     </div>
                 </div>
             </div>
             <div class="items-content" id="thethao">
                 <div class="items" data-aos="fade-right" data-aos-duration="1300">
                     <div class="img-item">
+                        <a href="">
+                            <div class="hot">Hot</div>
                         <img src="image/kuro.jpg" alt="">
+                        </a>
                         <p>Kuroko No Basket</p>
                     </div>
                     <div class="manga-prince">
-                        <p>150.000</p>
+                        <button>Đọc ngay</button>
                     </div>
                 </div>
                 <div class="items" data-aos="fade-up" data-aos-duration="1300">
                     <div class="img-item">
+                        <a href="">
+                            <div class="hot">Hot</div>
                         <img src="image/haikyui.jpg" alt="">
+                        </a>
                         <p>Haikyui</p>
                     </div>
                     <div class="manga-prince">
-                        <p>150.000</p>
+                        <button>Đọc ngay</button>
                     </div>
                 </div>
                 <div class="items" data-aos="fade-left" data-aos-duration="1300">
                     <div class="img-item">
+                        <a href="">
+                            <div class="hot">Hot</div>
                         <img src="image/aoashi.jpg" alt="">
+                        </a>
                         <p>Ao Ashi</p>
                     </div>
                     <div class="manga-prince">
-                        <p>150.000</p>
+                        <button>Đọc ngay</button>
                     </div>
                 </div>
                 <div class="items" data-aos="fade-right" data-aos-duration="1300">
                     <div class="img-item">
+                        <a href="">
+                            <div class="hot">Hot</div>
                         <img src="image/free.jpg" alt="">
+                        </a>
                         <p>Free!</p>
                     </div>
                     <div class="manga-prince">
-                        <p>150.000</p>
+                        <button>Đọc ngay</button>
                     </div>
                 </div>
                 <div class="items" data-aos="fade-up" data-aos-duration="1300">
                     <div class="img-item">
+                        <a href="">
+                            <div class="hot">Hot</div>
                         <img src="image/ice.jpg" alt="">
+                        </a>
                         <p>Yuri!!! on Ice</p>
                     </div>
                     <div class="manga-prince">
-                        <p>150.000</p>
+                        <button>Đọc ngay</button>
                     </div>
                 </div>
                 <div class="items" data-aos="fade-left" data-aos-duration="1300">
                     <div class="img-item">
                         <img src="image/hachi.jpg" alt="">
-                        <p>Naruto2</p>
+                        <p>Hachi</p>
                     </div>
                     <div class="manga-prince">
-                        <p>150.000</p>
+                        <button>Đọc ngay</button>
                     </div>
                 </div>
             </div>
             <div class="items-content" id="trinhtham">
                 <div class="items" data-aos="fade-right" data-aos-duration="1300">
                     <div class="img-item">
+                        <a href="">
+                            <div class="hot">Hot</div>
                         <img src="image/conan.jpg" alt="">
+                        </a>
                         <p>Conan</p>
                     </div>
                     <div class="manga-prince">
-                        <p>150.000</p>
+                        <button>Đọc ngay</button>
                     </div>
                 </div>
                 <div class="items" data-aos="fade-up" data-aos-duration="1300">
                     <div class="img-item">
+                        <a href="">
+                            <div class="hot">Hot</div>
                         <img src="image/death.jpg" alt="">
+                        </a>
                         <p>Death Node</p>
                     </div>
                     <div class="manga-prince">
-                        <p>150.000</p>
+                        <button>Đọc ngay</button>
                     </div>
                 </div>
                 <div class="items" data-aos="fade-left" data-aos-duration="1300">
                     <div class="img-item">
+                        <a href="">
+                            <div class="hot">Hot</div>
                         <img src="image/hyouka.jpg" alt="">
+                        </a>
                         <p>Hyouka</p>
                     </div>
                     <div class="manga-prince">
-                        <p>150.000</p>
+                        <button>Đọc ngay</button>
                     </div>
                 </div>
                 <div class="items" data-aos="fade-right" data-aos-duration="1300">
@@ -322,7 +394,7 @@
                         <p>Psycho-Pass</p>
                     </div>
                     <div class="manga-prince">
-                        <p>150.000</p>
+                        <button>Đọc ngay</button>
                     </div>
                 </div>
                 <div class="items" data-aos="fade-up" data-aos-duration="1300">
@@ -331,7 +403,7 @@
                         <p>Bungou Stray Dogs</p>
                     </div>
                     <div class="manga-prince">
-                        <p>150.000</p>
+                        <button>Đọc ngay</button>
                     </div>
                 </div>
                 <div class="items" data-aos="fade-left" data-aos-duration="1300">
@@ -340,36 +412,45 @@
                         <p>Kemono Jihen</p>
                     </div>
                     <div class="manga-prince">
-                        <p>150.000</p>
+                        <button>Đọc ngay</button>
                     </div>
                 </div>
             </div>
             <div class="items-content" id="hocduong">
                 <div class="items" data-aos="fade-right" data-aos-duration="1300">
                     <div class="img-item">
+                        <a href="">
+                            <div class="hot">Hot</div>
                         <img src="image/doraemon.jpg" alt="">
+                        </a>
                         <p>Doraemon</p>
                     </div>
                     <div class="manga-prince">
-                        <p>150.000</p>
+                        <button>Đọc ngay</button>
                     </div>
                 </div>
                 <div class="items" data-aos="fade-up" data-aos-duration="1300">
                     <div class="img-item">
+                        <a href="">
+                            <div class="hot">Hot</div>
                         <img src="image/love.jpg" alt="">
+                        </a>
                         <p>Love is War</p>
                     </div>
                     <div class="manga-prince">
-                        <p>150.000</p>
+                        <button>Đọc ngay</button>
                     </div>
                 </div>
                 <div class="items" data-aos="fade-left" data-aos-duration="1300">
                     <div class="img-item">
+                        <a href="">
+                            <div class="hot">Hot</div>
                         <img src="image/thang4.jpg" alt="">
+                        </a>
                         <p>Your Lie In April</p>
                     </div>
                     <div class="manga-prince">
-                        <p>150.000</p>
+                        <button>Đọc ngay</button>
                     </div>
                 </div>
                 <div class="items" data-aos="fade-right" data-aos-duration="1300">
@@ -378,25 +459,31 @@
                         <p>Kimi ni Todoke</p>
                     </div>
                     <div class="manga-prince">
-                        <p>150.000</p>
+                        <button>Đọc ngay</button>
                     </div>
                 </div>
                 <div class="items"  data-aos="fade-up" data-aos-duration="1300">
                     <div class="img-item">
+                        <a href="">
+                            <div class="hot">Hot</div>
                         <img src="image/nisekoi.jpg" alt="">
+                        </a>
                         <p>Nisekoi</p>
                     </div>
                     <div class="manga-prince">
-                        <p>150.000</p>
+                        <button>Đọc ngay</button>
                     </div>
                 </div>
                 <div class="items" data-aos="fade-left" data-aos-duration="1300">
                     <div class="img-item">
+                        <a href="">
+                            <div class="hot">Hot</div>
                         <img src="image/class.jpg" alt="">
+                        </a>
                         <p>Assassin Classroom</p>
                     </div>
                     <div class="manga-prince">
-                        <p>150.000</p>
+                        <button>Đọc ngay</button>
                     </div>
                 </div>
             </div>
@@ -404,20 +491,25 @@
         <br><br><br><br>
     </div>
     <footer>
-        <div class="container">
             <div class="row">
-                <div class="footer-item padding">
-                    <p>Email: hoanmyotk@gmail.com</p>
+                <div class="footer-item" style="padding: 20px ;">
+                    <p><i class="fa-solid fa-phone"></i>Hotline: 0767659335</p>
+                    <p><i class="fa-solid fa-envelope"></i>Email: hoanmyotk@gmail.com</p>
+                    <div class="contact">
+                        <a href="https://www.facebook.com/mynguyenhoan1311/"><i class="fa-brands fa-facebook" style="color: blue;"></i></a>
+                        <a href="https://www.instagram.com/nhmy1306/"><i class="fa-brands fa-instagram" style="color: #FF5D5D;"></i></a>
+                        <a href="https://github.com/hoanmyotk"><i class="fa-brands fa-github"></i></a>
+                        <a href=""><i class="fa-brands fa-twitter" style="color: #BDE6F1;"></i></a>
+                    </div>
                 </div>
-                <div class="footer-item padding">
+                <div class="footer-item">
                     <br>
-                    <p>Mọi thông tin và hình ảnh trên website đều được sưu tầm trên Internet. Chúng tôi không sở hữu hay chịu trách nhiệm bất kỳ thông tin nào trên web này. Nếu làm ảnh hưởng đến cá nhân hay tổ chức nào, khi được yêu cầu, chúng tôi sẽ xem xét và gỡ bỏ ngay lập tức.</p>
+                    <p>Mọi thông tin và hình ảnh trên website đều được sưu tầm trên Internet. admin không sở hữu hay chịu trách nhiệm bất kỳ thông tin nào trên web này. Nếu làm ảnh hưởng đến cá nhân hay tổ chức nào, khi được yêu cầu, admin sẽ xem xét và gỡ bỏ ngay lập tức.</p>
                 </div>
                 <div class="end">
                     <p>Exam@2022. Designed by wibu</p>
                 </div>
             </div>
-        </div>
     </footer>
     <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
     <script src="main.js"></script>

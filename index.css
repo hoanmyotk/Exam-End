@@ -4,14 +4,7 @@
     box-sizing: border-box;
     font-family: 'Nunito', sans-serif;
 }
-body{
-    width: 100vw;
-    height: 100vh;
-    display: block;
-}
 li{
-    padding: 0 20px;
-    width: 100%;
     list-style: none;
 }
 a{
@@ -38,7 +31,8 @@ header>img{
     width: 100%;
     height: 100%;
     object-fit: cover;
-    animation: Inout 5s infinite;
+    animation: Inout 3.5s infinite;
+    transition: all 0.4s ease;
     z-index: -1;
 }
 @keyframes Inout{
@@ -55,7 +49,7 @@ header::before{
     position: absolute;
     content: "";
     display: block;
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.35);
 }
 .top{
     position: fixed;
@@ -169,7 +163,7 @@ header::before{
     justify-content: center;
     align-items: center;
     text-align: center;
-    z-index: 3;
+    z-index: 4;
 }
 .search{
     display: flex;
@@ -214,12 +208,16 @@ header::before{
 /* .menu-item ul{
     margin-top: 10px;
 } */
-.menu-item li{
+.menu-item ul li a{
     line-height: 65px;
-}
-.menu-item li a{
+    position: relative;
+    text-transform: uppercase;
     color: #15133C;
-    font-size: 20pt;
+    font-size: 22px;
+}
+.menu-item ul li a i{
+    padding-right: 6px;
+    /* transform: translateY(-2.5px); */
 }
 .menu-item li:hover .subnav{
     display: block
@@ -228,10 +226,7 @@ li:hover > a{
     background-color: #808080;
 }
 .subnav li:hover a{
-    color: red ;
-}
-.nav{
-    position: relative;
+    background-color: #92B4EC;
 }
 .subnav{
     display: none; 
@@ -240,11 +235,15 @@ li:hover > a{
     background-color: #2D4263;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     z-index: 6;
-    top: 0;
+    top: -100%;
     right: 250px;
 }
+.nav{
+    position: relative;
+}
 .subnav a{
-    color: #FFD24C !important;
+    text-transform: none !important;
+    color: white !important;
     line-height: 50px;
     padding: 0 12px;
 }
@@ -310,10 +309,25 @@ li:hover > a{
     cursor: pointer;
     padding: 15px 30px;
     border-radius: 50px;
+    border: 2px solid #15133C;
     font-size: 15pt;
     background-color: #FBBC01;
     opacity: 0.3;
     animation: nhapnhay 2s infinite;
+}
+.signup-link{
+    text-align: center;
+}
+.signup-link h4{
+    margin-top: 20px;
+    font-size: 20px;
+}
+.signup-link h4 a{
+    font-size: 17px;
+    transition: 0.3s;
+}
+.signup-link h4 a:hover{
+    color: #FF5D5D;
 }
 .dangki:hover{
     background: transparent;
@@ -341,6 +355,7 @@ button{
     border: none;
     outline: none;
     font-size: 18px;
+    width: 70%;
 }
 .form-input::placeholder{
     color: #15133C;
@@ -361,6 +376,7 @@ button{
     cursor: pointer;
     margin-top: 20px;
     transition: all 0.3s ease;
+    border-radius: 30px;
 }
 .form-submit:hover{
     background-color: #FFD369;
@@ -394,11 +410,6 @@ button{
         opacity: 0.3;
     }
 }
-.about-this{
-    width: 100vw;
-    background-color: #1F1D36;
-    color: white;
-}
 .padding{
     padding: 15px;
 }
@@ -430,21 +441,34 @@ button{
     font-size: 45px;
     display: block;
 }
+.about-this{
+    width: 100vw;
+    background-color: #1F1D36;
+    color: white;
+    padding: 20px 30px;
+}
 .about-this .about-content img{
     width: 100%;
     height: 100%;
     border-radius: 10px;
 }
 .about-this .about-content{
-    max-width: 50%;
+    width: 50%;
     overflow: hidden;
 }
 .about-this .about-content p{
     text-align: justify;
+    margin-bottom: 20px;
 }
-/* .center{
-    justify-content: center;
-} */
+.about-content .view-tab input{
+    border: none;
+    outline: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+    background-color: #FF5D5D;
+    font-size: 15px;
+    cursor: pointer;
+}
 .about-that{
     width: 100vw;
     background-color: #F1EEE9;
@@ -480,7 +504,6 @@ button{
     display: flex;
     align-items: center;
     position: relative;
-    flex-wrap: wrap;
     transition: all ease 0.3s;
 }
 .items::before{
@@ -497,8 +520,8 @@ button{
 .items:hover .img-item p{
     color: #15133C;
 }
-.items:hover .manga-prince p{
-    color: #FBBC01;
+.items:hover .manga-prince button{
+    color: #FF5D5D;
 }
 .img-item{
     display: flex;
@@ -507,7 +530,8 @@ button{
 .img-item p{
     margin-left: 25px;
     font-size: 18px;
-    color: #FBBC01;
+    color: #FF5D5D;
+    transition: all 0.3s ease-in-out;
 }
 .img-item img{
     width: 130px;
@@ -517,25 +541,66 @@ button{
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     transition: all 0.3s ease;
 }
+.hot{
+    position: absolute;
+    top: 21px;
+    left: 15px;
+    width: 34px;
+    height: 27px;
+    text-align: center;
+    font-size: 16px;
+    line-height: 27px;
+    background-color: red;
+    color: white;
+    border-radius: 5px;
+    animation: pulse 1s steps(5, start) infinite;
+}
+@keyframes pulse{
+    0%{
+        opacity: 0.3;
+    }
+    50%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0.3;
+    }
+}
+
 .img-item img:hover{
-    transform: scale(1.1);
+    transform: scale(1.2);
 }
 .manga-prince{
-    margin-left: 25px;
+    margin-left: 15px;
     position: relative;
 }
 .manga-prince::before{
+    height: 100%;
     content: "|";
+    text-align: center;
     position: absolute;
     left: -12px;
-    top: -5px;
+    top: -4px;
     font-size: 25px;
     color: #808080;
 }
-.manga-prince p{
-    font-size: 18px;
+.manga-prince button{
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    border: none;
+    outline: none;
+    padding: 5px 10px;
+    background-color: #8FD6E1;
+    font-size: 15px;
     color: #15133C;
     transition: all 0.3s ease-in;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+    border: 1px solid #15133C;
+}
+.manga-prince button:hover{
+    background-color: transparent;
+    transform: scale3d(1.1);
 }
 .items-content{
     display: none;
@@ -550,14 +615,64 @@ button{
 .footer-item{
     width: 50%;
 }
+.footer-item i{
+    padding-right: 6px;
+}
 footer{
+    width: 100vw;
     border-top: 4px solid #FBBC01;
 }
+.contact{
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+}
+.contact i{
+    color: #15133C;
+    font-size: 25px;
+}
 .end{
+    margin-top: 10px;
     width: 100%;
     background-color: #808080;
     text-align: center;
 }
 .end p{
     color: black;
+}
+#myback{
+    z-index: 3;
+    position: fixed;
+    right: 25px;
+    transform: translateY(180px);
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    background-color: rgb(255, 93, 93, 0.7);
+    display: none;
+    border-radius: 50%;
+    transition: all 0.3s ease-in-out;
+}
+#myback.active{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+#myback i{
+    padding: 0;
+    font-size: 30px;
+}
+@media(max-width: 1320px){
+    .about-this .about-content{
+        width: 100%;
+    }
+    .items{
+        width: 50%;
+    }
+}
+@media(max-width: 736px){
+    .items{
+        width: 100%;
+    }
 }

@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Nunito', sans-serif;
+}
+
+body {
+	background: url(https://img.freepik.com/free-vector/perspective-japanese-street-neon-lights_52683-44988.jpg?w=2000);
+    background-size: cover;
+	height: 100vh;
+	overflow: hidden;
+}
+
+.container {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 400px;
+	background: white;
+	border-radius: 10px;
+	box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.15);
+}
+
+
+.container form {
+	padding: 0 40px;
+}
+
+form .form-control {
+	position: relative;
+	border-bottom: 2px solid #adadad;
+	margin: 40px 0;
+}
+.form-control:nth-child(1){
+	margin-top: 10px;
+}
+.form-control.success {
+	border-bottom-color: #2691d9;
+}
+
+.form-control.error {
+	border-bottom-color: #e74c3c;
+}
+
+.form-control input {
+	width: 70%;
+	height: 40px;
+	font-size: 16px;
+	border: none;
+	background: none;
+	outline: none;
+}
+
+.eye1, .eye2{
+	margin-top: 17px;
+    float: right;
+}
+.eye i, .eye2 i{
+    color: black;
+    padding: 0;
+    cursor: pointer;
+}
+small {
+	position: absolute;
+	left: 0;
+	top: 100%;
+	margin-top: 5px;
+	color: #e74c3c;
+}
+
+.form-control span::before {
+	content: '';
+	position: absolute;
+	top: 40px;
+	left: 0;
+	width: 0%;
+	height: 2px;
+	background: #FFEE63;
+	transition: 0.3s;
+}
+
+.form-control input:focus ~ span::before {
+	width: 100%;
+}
+
+input[type='submit'] {
+	margin: 25px 0;
+	width: 100%;
+	height: 50px;
+	border: 1px solid;
+    background-color: #FFEE63;
+	border-radius: 25px;
+	font-size: 18px;
+	color: black;
+	font-weight: 700;
+	cursor: pointer;
+	outline: none;
+	transition: 0.5s;
+}
+
+input[type='submit']:hover {
+    color: white;
+    background: #2691d9;
+}
+
+.form-tick{
+	text-align: center;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.form-tick span{
+	margin-left: -90px;
+}
+.law{
+	margin-top: 20px;
+	text-align: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+}
+.law input{
+	margin-right: 3px;
+	margin-top: 4px;
+	width: 15px;
+	height: 15px;
+}
+.law span{
+	margin-top: 3.8px;
+}
+.law span a{
+	color: #242F9B;
+	text-decoration: none;
+}
+.law span a:hover{
+	color: #e74c3c;
+	text-decoration: underline;
+}
+/* input[type='submit']:active + input[type='checkbox']:not(:checked) ~ .error{
+	display: block;
+} */
+.logo{
+	transform: translateX(150px);
+}
+.end{
+    position: absolute;
+	bottom: 0;
+    width: 100%;
+    background-color: #243A73;
+    text-align: center;
+}
+.end p{
+    color: #F6FBF4;
+}
+
+
+	
