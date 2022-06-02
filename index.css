@@ -528,10 +528,15 @@ button{
     align-items: center;
 }
 .img-item p{
-    margin-left: 25px;
+    margin-left: 20px;
     font-size: 18px;
     color: #FF5D5D;
     transition: all 0.3s ease-in-out;
+}
+.img-item p span{
+    font-size: 14px;
+    font-style: italic;
+    color: #2A2550;
 }
 .img-item img{
     width: 130px;
