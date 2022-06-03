@@ -4,6 +4,11 @@
     box-sizing: border-box;
     font-family: 'Nunito', sans-serif;
 }
+/* body{
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+} */
 html{
     scroll-behavior: smooth;
 }
@@ -445,6 +450,7 @@ button{
     display: block;
 }
 .about-this{
+    overflow: hidden;
     width: 100vw;
     background-color: #1F1D36;
     color: white;
@@ -473,6 +479,7 @@ button{
     cursor: pointer;
 }
 .about-that{
+    overflow: hidden;
     width: 100vw;
     background-color: #F1EEE9;
     color: #15133C;
@@ -626,7 +633,9 @@ button{
 .footer-item i{
     padding-right: 6px;
 }
-footer{
+footer
+{
+    overflow: hidden;
     width: 100vw;
     border-top: 4px solid #FBBC01;
 }
