@@ -275,7 +275,6 @@ button{
 }
 .container{
     width: 100vw;
-    height: 100vh;
     color: white;
     padding-top:  30px;
     display: flex;
